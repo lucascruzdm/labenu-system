@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { EstudantesService } from './estudantes.service';
 
 
-@Controller('docentes')
+@Controller('estudantes')
 export class EstudantesControler {
 
      constructor(private estudantesService: EstudantesService) {}
