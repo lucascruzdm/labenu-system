@@ -7,6 +7,5 @@ export class DocentesService {
     
       async listarDocentes() {
         return this.prisma.docentes.findMany();
-    
     }
 }
