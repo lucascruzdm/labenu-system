@@ -1,3 +1,6 @@
+import { Docentes } from "src/docentes/docentes.model";
+import { Estudantes } from "src/estudantes/estudantes.model";
+
 export class Turmas {
     id: number;
     nome: string;
