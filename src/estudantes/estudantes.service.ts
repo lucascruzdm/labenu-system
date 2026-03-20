@@ -18,7 +18,13 @@ export class EstudantesService {
   });
 }
 
-
+      async buscarEstudantes(data: Estudantes) {
+        return this.prisma.estudantes.findUnique({
+          where: {
+           id: Number(data.id),
+          }
+        });
+      }
     }
 
 function formatDateBRToISO(dateBR: string): string {

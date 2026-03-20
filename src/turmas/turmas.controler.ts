@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Post, Query } from "@nestjs/common";
 import { TurmasService } from "./turmas.service";
 import { Turmas } from "./turmas.model";
 
@@ -17,6 +17,10 @@ import { Turmas } from "./turmas.model";
             return this.turmasService.create(turmas);
         }
     
-    
+    @Get('buscarturmas')
+        async buscarTurmas(@Query() turmas: Turmas) {
+
+            return this.turmasService.buscarTurmas(turmas);
     
     }
+}
