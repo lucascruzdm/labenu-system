@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { EstudantesService } from './estudantes.service';
 import type { Estudantes } from './estudantes.model';
 
@@ -18,7 +18,10 @@ export class EstudantesControler {
         return this.estudantesService.create(estudantes);
       }
 
-
-
+      @Get('buscarestudantes')
+      async buscarEstudantes(@Query() estudantes: Estudantes) {
+        return this.estudantesService.buscarEstudantes(estudantes);
+      }
 
     }
+

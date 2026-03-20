@@ -18,7 +18,9 @@ export class DocentesControler {
         return this.docentesService.create(docentes)
       }
 
-
-
+      @Get('buscardocentes')
+        async buscarDocentes(@Query() docentes: Docentes) {
+          return this.docentesService.buscarDocentes(docentes)
+        }
 
     }

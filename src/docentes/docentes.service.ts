@@ -19,6 +19,13 @@ export class DocentesService {
   });
 }
 
+   async buscarDocentes(data: Docentes){
+      return this.prisma.docentes.findUnique({
+         where: {
+            id : Number(data.id)
+         }
+      })
+   }
 
     }
 
