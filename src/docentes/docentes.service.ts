@@ -8,14 +8,14 @@ export class DocentesService {
     
       async listarDocentes() {
         return this.prisma.docentes.findMany();
+
      }
 
      async create(data: Docentes) {
   return this.prisma.docentes.create({
     data: {
       ...data,
-      dataNascimento: new Date(formatDateBRToISO(data.dataNascimento as string))
-    }
+      dataNascimento: new Date(formatDateBRToISO(data.dataNascimento as string))    }
   });
 }
 
